@@ -1,0 +1,321 @@
+body {
+    font-family: 'Exo', sans-serif;
+    margin: 0;
+    background-color: #f0f0f5;
+    color: #13100e;
+    margin: 0; /* Remove default body margins */
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
+.logo {
+    margin-left: 50px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+header {
+    background-color: #13100e;
+    color: #f0f0f5;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Пробел между ссылками */
+    margin: 0 auto; /* Центрирование блока навигации */
+    padding: 0 20px; /* Добавим отступы, чтобы навигация не прилипала к краям */
+    display: flex;
+    gap: 250px;
+    margin: 0 auto;
+    padding: 0 200px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f0f0f5;
+    font-size: 1.2em;
+    transition: transform 0.2s ease-in-out;
+}
+
+header nav a:hover {
+    transform: scale(1.1);
+}
+
+.game-section1 {
+    background-color: #f0f0f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    position: relative;
+}
+
+.game-title { 
+    font-size: 2em;
+    margin-bottom: 20px; 
+    color: #13100e; 
+    text-align: center;
+}
+
+.game-canvas {
+    width: calc(100vw - 40px); 
+    max-width: 100%; 
+    height: 600px; 
+    background-color: #13100e;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.game-description1 {
+    width: calc(100vw - 40px); 
+    max-width: 1200px; 
+    text-align: left; 
+    margin: 0 auto;
+    color: #13100e;
+    padding: 0 20px;
+    box-sizing: border-box; 
+}
+
+.game-description1 p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #13100e;
+}
+
+.fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #f0f0f5;
+    color: #13100e;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.fullscreen-button:hover {
+    background-color: #13100e;
+    color: #f0f0f5;
+}
+
+/* Styles for fullscreen mode */
+.fullscreen {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100; 
+    background-color: #13100e;
+}
+
+.fullscreen .game-canvas {
+    width: 100%;
+    height: 100%;
+    max-width: 100px; /* Removes the max-width restriction in fullscreen */
+    margin: 0;
+}
+
+footer {
+    background-color: #13100e;
+    color: #f0f0f5;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    align-items: start;
+    position: relative;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+}
+
+.footer-section {
+    padding: 1rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section.social {
+  position: relative; /* Necessary for absolute positioning of the pseudo-element */
+}
+
+.footer-section.games a,
+.footer-section.about a,
+.footer-section.social a,
+.footer-section.contact a {
+  color: #f0f0f5; 
+  text-decoration: none; 
+}
+
+.footer-section.games a:hover,
+.footer-section.about a:hover,
+.footer-section.social a:hover,
+.footer-section.contact a:hover {
+  color: #e65100; 
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+
+.social-icons::after { /* Pseudo-element for the dotted line */
+    content: "";
+    position: absolute;
+    bottom: 55px; /* Adjust vertical offset as needed */
+    left: 15px;
+    width: 58%; /* Extends to the width of .social-icons */
+    height: 2px;
+    border-top: 2px dotted #ccc; /* Dotted line style */
+}
+
+.social-icons a {
+    text-decoration: none; /* Remove underlines */
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Slight scale-up on hover */
+}
+
+.social-icons img { /* Style the images */
+    height: 35px;  /* Adjust as needed */
+    width: auto;   /* Maintain aspect ratio */
+    vertical-align: middle; /* Prevent images from dropping below text */
+}
+
+.footer-bottom {
+    grid-column: 1 / span 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ccc;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in-out; /* Add transition */
+}
+
+.logo-container:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.gamearchive-text {
+    color: #e65100;
+    font-size: 1.2em; /* Adjust size as needed */
+    margin-left: 10px; /* Adjust spacing as needed */
+    display: inline-block;
+    vertical-align: center; /* Align vertically with logo */
+    line-height: 1.2; /* Adjust line spacing as needed */
+}
+
+.gamearchive-link {
+  text-decoration: none; /* Remove default underline */
+  color: #e65100; /* Inherit color from .gamearchive-text */
+}
+
+.gamearchive-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.footer-bottom p {
+    margin: 0;
+    margin-left: 10px; /* Push to the right */
+}
+
+.footer-bottom a {
+    margin: 0;
+}
+
+.footer-bottom .privacy-policy {
+    margin-left: auto;
+    color: #f0f0f5; 
+    text-decoration: none; 
+}
+
+.footer-bottom .privacy-policy:hover {
+  color: #e65100; 
+}
+
+
+.footer-section.social hr {
+    display: none;
+}
+
+.footer-section.contact hr {
+    width: 100%;
+    border: none;
+    border-top: 2px dotted #ccc;
+    margin: 5px 0;
+}
+
+
+/* ... other styles ... */
+
+@media (max-width: 768px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+    .footer-section {
+        margin-bottom: 10px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    .footer-bottom .logo {
+        margin-bottom: 10px;
+    }
+    .footer-bottom p, .footer-bottom a {
+        text-align: center;
+    }
+}
