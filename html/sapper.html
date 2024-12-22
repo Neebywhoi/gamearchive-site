@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameArchive</title>
+    <link rel="stylesheet" href="../style/style3.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1q0MvWjQ15IbD/t+s5+b3R1Z/CH/7xG3/57/z+qZ2/x+t7ad/w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+      <div class="logo-container">
+        <a href="index.html" class="logo"><img src="../images/logo.png" alt="GameArchive"></a>
+        <a href="index.html" class="gamearchive-link">
+            <span class="gamearchive-text">GAME<br>ARCHIVE</span>  <!-- Added span -->
+        </a>
+      </div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог игр</a>
+            <a href="about.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
+
+        <section class="game-section1">
+            <h1 class="game-title">САПЕР</h1>
+            <div class="game-canvas" id="snake-game">
+                <button class="fullscreen-button">Во весь экран</button>
+            </div> 
+            <div class="game-description1">
+                <p>Описание игры и инструкция к ней описание игры и инструкция к ней описание игры и инструкция к ней описание игры и инструкция к ней описание игры и инструкция к ней</p>
+            </div>
+        </section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-section games">
+      <h3>Каталог игр</h3>
+      <ul>
+        <li><a href="snake.html">Змейка</a></li>
+        <li><a href="chess.html">Шахматы</a></li>
+        <li><a href="sapper.html">Сапер</a></li>
+      </ul>
+    </div>
+    <div class="footer-section about">
+      <h3>О нас</h3>
+      <ul>
+        <li><a href="/about#goals">Цели</a></li>
+        <li><a href="/about#tasks">Задачи</a></li>
+      </ul>
+    </div>
+<div class="footer-section social">
+  <h3>Социальные сети</h3>
+  <div class="social-icons">
+    <a href="https://vk.com/your_vk_link" target="_blank"><img src="../images/VK.png" alt="VK"></a>
+    <a href="https://t.me/your_telegram_link" target="_blank"><img src="../images/TG.png" alt="Telegram"></a>
+    <a href="https://discord.gg/your_discord_link" target="_blank"><img src="../images/DIS.png" alt="Discord"></a>
+    <a href="https://www.instagram.com/your_instagram_link" target="_blank"><img src="../images/INST.png" alt="Instagram"></a>
+  </div>
+  <hr>
+</div>
+    <div class="footer-section contact">
+      <h3>Контакты</h3>
+      <hr>
+      <p>Телефон: +7 (919) 003-04-63</p>
+      <p>Email: gamearchive@mail.ru</p>
+      <hr>
+    </div>
+    <div class="footer-bottom">
+      <div class="logo-container">
+        <a href="index.html" class="logo"><img src="../images/logo.png" alt="GameArchive"></a>
+        <a href="index.html" class="gamearchive-link">
+            <span class="gamearchive-text">GAME<br>ARCHIVE</span>  <!-- Added span -->
+        </a>
+      </div>
+      <p>&copy; 2024. Все права защищены. GAMEARCHIVE.</p>
+      <a href="index.html" class="privacy-policy">Политика конфиденциальности</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+        <script>
+    // ... код игры ...
+
+  const canvas = document.getElementById('snake-game');
+  const fullscreenButton = canvas.querySelector('.fullscreen-button'); // Get button
+  let isFullscreen = false;
+
+  fullscreenButton.addEventListener('click', () => {
+    isFullscreen = !isFullscreen; // Toggle fullscreen state
+    canvas.classList.toggle('fullscreen'); // Add/remove fullscreen class
+  });
+</script>
+</body>
+</html>
